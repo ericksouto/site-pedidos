@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Lanchonete do Erick</h1>
+        <p>Faça seu pedido pelo WhatsApp</p>
+    </header>
+
+    <main>
+        <section class="cardapio">
+            <h2>Cardápio</h2>
+
+            <div class="itens">
+                <div class="item">
+                    <h3>Jantinha de carne</h3>
+                    <p>Arroz, maionese, farofa e vinagrete</p>
+                    <strong>R$ 22,00</strong>
+                    <button onclick="adicionarItem('Jantinha de carne', 22)">Adicionar</button>
+                </div>
+
+                <div class="item">
+                    <h3>Espetinho de carne</h3>
+                    <p>Somente o espetinho</p>
+                    <strong>R$ 12,00</strong>
+                    <button onclick="adicionarItem('Espetinho de carne', 12)">Adicionar</button>
+                </div>
+
+                <div class="item">
+                    <h3>Refrigerante</h3>
+                    <p>Lata 350ml</p>
+                    <strong>R$ 6,00</strong>
+                    <button onclick="adicionarItem('Refrigerante', 6)">Adicionar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrinho">
+            <h2>Carrinho</h2>
+
+            <ul id="listaCarrinho"></ul>
+
+            <p class="total">Total: R$ <span id="total">0,00</span></p>
+
+            <input type="text" id="nomeCliente" placeholder="Seu nome">
+            <input type="text" id="enderecoCliente" placeholder="Seu endereço">
+
+            <textarea id="observacoes" placeholder="Observações do pedido (opcional)">
+            </textarea>
+
+            <button class="finalizar" onclick="finalizarPedido()">Finalizar pelo WhatsApp</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
